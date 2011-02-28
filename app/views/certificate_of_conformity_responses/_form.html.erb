@@ -1,0 +1,28 @@
+<%= form_for(@certificate_of_conformity_response) do |f| %>
+  <% if @certificate_of_conformity_response.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@certificate_of_conformity_response.errors.count, "error") %> prohibited this certificate_of_conformity_response from being saved:</h2>
+
+      <ul>
+      <% @certificate_of_conformity_response.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+  <div class="field">
+    <%= f.label :user_name %><br />
+    <%= f.text_field :user_name %>
+  </div>
+  <div class="field">
+    <!-- <%= f.label :certificate_of_conformity_id %> -->
+    <%= f.hidden_field :certificate_of_conformity_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

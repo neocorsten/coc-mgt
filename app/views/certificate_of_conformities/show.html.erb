@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+<%= debug @certificate_of_conformity %>
+<p>
+  <b>Customer:</b>
+  <%= @certificate_of_conformity.customer_id %>
+</p>
+
+<p>
+  <b>Delivery note nb:</b>
+  <%= @certificate_of_conformity.delivery_note_nb %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @certificate_of_conformity.status_id %>
+</p>
+
+<p>
+  <b>Part number:</b>
+  <%= @certificate_of_conformity.part_number %>
+</p>
+
+<p>
+  <b>Assembly code:</b>
+  <%= @certificate_of_conformity.assembly_code %>
+</p>
+
+<p>
+  <b>Certificate type:</b>
+  <%= @certificate_of_conformity.certificate_type_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_certificate_of_conformity_path(@certificate_of_conformity) %> |
+<%= link_to 'Back', certificate_of_conformities_path %>

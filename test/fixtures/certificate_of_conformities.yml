@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  customer_id: 1
+  delivery_note_nb: 1
+  status_id: 1
+  part_number: MyString
+  assembly_code: MyString
+  certificate_type_id: 1
+
+two:
+  customer_id: 1
+  delivery_note_nb: 1
+  status_id: 1
+  part_number: MyString
+  assembly_code: MyString
+  certificate_type_id: 1

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: 
+  certificate_of_conformity_id: MyString
+
+two:
+  user: 
+  certificate_of_conformity_id: MyString

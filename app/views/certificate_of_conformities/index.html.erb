@@ -1,0 +1,41 @@
+<h1>Listing certificate_of_conformities</h1>
+
+<table>
+  <tr>
+	<th>Generated ID</th>
+	<th>Generated String</th>
+    <th>Customer</th>
+    <th>Delivery note nb</th>
+    <th>Status</th>
+    <th>Part number</th>
+    <th>Assembly code</th>
+    <th>Certificate type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @certificate_of_conformities.each do |certificate_of_conformity| %>
+  <tr>
+	<td><%= certificate_of_conformity.generated_id %></td>
+	<td><%= certificate_of_conformity.generated_string %></td>
+    <td><%= certificate_of_conformity.customer.name %></td>
+    <td><%= certificate_of_conformity.delivery_note_nb %></td>
+    <td><%= certificate_of_conformity.status.name %></td>
+    <td><%= certificate_of_conformity.part_number %></td>
+    <td><%= certificate_of_conformity.assembly_code %></td>
+    <td><%= certificate_of_conformity.certificatetype.typename %></td>
+
+    <td><%= link_to 'Respond', new_certificate_of_conformity_response_path(:id => certificate_of_conformity.id) %></td>
+	<td><%= link_to 'Respond', :controller => "certificate_of_conformity_responses", :action => "new", :id => certificate_of_conformity.id %>
+		
+    <td><%= link_to 'Show', certificate_of_conformity %></td>
+    <td><%= link_to 'Edit', edit_certificate_of_conformity_path(certificate_of_conformity) %></td>
+    <td><%= link_to 'Destroy', certificate_of_conformity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Certificate of conformity', new_certificate_of_conformity_path %>

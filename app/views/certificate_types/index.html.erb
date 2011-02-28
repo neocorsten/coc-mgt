@@ -1,0 +1,23 @@
+<h1>Listing certificate_types</h1>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @certificate_types.each do |certificate_type| %>
+  <tr>
+    <td><%= certificate_type.type %></td>
+    <td><%= link_to 'Show', certificate_type %></td>
+    <td><%= link_to 'Edit', edit_certificate_type_path(certificate_type) %></td>
+    <td><%= link_to 'Destroy', certificate_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Certificate type', new_certificate_type_path %>

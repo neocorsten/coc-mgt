@@ -1,0 +1,37 @@
+<%= form_for(@certificate_of_conformity) do |f| %>
+  <% if @certificate_of_conformity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@certificate_of_conformity.errors.count, "error") %> prohibited this certificate_of_conformity from being saved:</h2>
+
+      <ul>
+      <% @certificate_of_conformity.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :customer_id %><br />
+    <%= collection_select "certificate_of_conformity", "customer_id", @customer, "id", "name", {:prompt => "Select a customer"} %>
+  </div>
+  <div class="field">
+    <%= f.label :delivery_note_nb %><br />
+    <%= f.text_field :delivery_note_nb %>
+  </div>
+  <div class="field">
+    <%= f.label :part_number %><br />
+    <%= f.text_field :part_number %>
+  </div>
+  <div class="field">
+    <%= f.label :assembly_code %><br />
+    <%= f.text_field :assembly_code %>
+  </div>
+  <div class="field">
+    <%= f.label :certificate_type_id %><br />
+    <%= collection_select "certificate_of_conformity", "certificate_type_id", @certificate_type, "id", "typename", {:prompt => "Select a certificate type"} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
